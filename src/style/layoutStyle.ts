@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Test = styled.div`
+export const TestStyle = styled.div`
   width: 100px;
   height: 50px;
   background-color: red;

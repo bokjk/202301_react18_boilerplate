@@ -23,5 +23,8 @@ npm i -D terser-webpack-plugin (코드 난독화)
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 
 npm i @emotion/core @emotion/react @emotion/styled @emotion/babel-preset-css-prop @emotion/css
+
+npm install @loadable/component (코드 스플릿)
+npm i --save-dev @types/loadable__component
 ```
 
