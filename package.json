@@ -11,6 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^11.10.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -29,8 +33,11 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
+    "prettier": "^2.8.3",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "source-map-loader": "^4.0.1",
