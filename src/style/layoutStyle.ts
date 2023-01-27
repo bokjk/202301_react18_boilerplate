@@ -1,11 +1,21 @@
 import styled from "@emotion/styled";
 
-export const TestStyle = styled.div`
-  width: 100px;
-  height: 50px;
-  background-color: red;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+export const MainLayout = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header_area"
+    "body_area"
+    "footer_area";
+  grid-template-rows: 50px 1fr 60px;
+  overflow: auto;
+`;
+
+export const CommonBodyStyle = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "left_navi_area contents_area";
+  grid-template-columns: 210px 1fr;
 `;
