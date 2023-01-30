@@ -1,21 +1,36 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { LoginPageStyle } from "@style/loginPageStyle";
+import axios, { AxiosError } from "axios";
+import { useRecoilState } from "recoil";
+import { issueTotalToken } from "@utils/common";
 
 import { InputTextComp, InputPasswordComp } from "@components/FormsComp";
 import { CustomButton } from "@components/ButtonsComp";
 
 import { PersonCircle, ShieldLock } from "@emotion-icons/bootstrap";
+import { loginState } from "@utils/global";
 
 type LoginType = {
-  setLogin: React.Dispatch<React.SetStateAction<boolean>>;
+  // setLogin: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const LoginPage = ({ setLogin }: LoginType) => {
-  const loginHandler = (e: React.FormEvent<HTMLFormElement>) => {
+const LoginPage = ({}: LoginType) => {
+  const [login, setLogin] = useRecoilState(loginState);
+
+  const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("로그인 버튼 클릭");
-    setLogin(true);
+
+    try {
+      const res = await issueTotalToken();
+      if (res) {
+        setLogin(true);
+      }
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
